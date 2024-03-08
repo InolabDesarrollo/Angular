@@ -3,3 +3,7 @@
 <p>{{valorContador}}</p>
 <button (click)="incrementar()">Incrementar</button>
 <button (click)="decrementar()">Decrementar</button>
+
+<app-hijo [recibeHijo] = "mensajePadre" (enviaHijo)="reciboMensajeHijo($event)"></app-hijo>
+
+<h4>El mensaje del hijo es: {{mensajeHijo}}</h4>
