@@ -19,4 +19,19 @@ export class HijoComponent {
   enviarMensaje(){
     this.enviaHijo.emit(this.mensaje)
   }
+
+
+  //Funciones que enviaran eventos al padre:
+  //se agregan mas outputs
+  @Output() enviarAPadre = new EventEmitter<void>();
+  @Output() enviarAPadre2 = new EventEmitter<void>();
+
+  enviaEventoAPadre(){
+    this.enviarAPadre.emit();
+  }
+  
+  enviaEventoAPadre2(){
+    this.enviarAPadre2.emit();
+  }
+
 }

@@ -21,9 +21,20 @@ export class PadreComponent {
   //Mensaje que recibira del hijo
   mensajeHijo: string = '';
 
+  //Esta funcion cargara lo que el componente hijo envie al componente padre
+  //guardandolo en la variable mensajeHijo
   reciboMensajeHijo($event: string){
     this.mensajeHijo = $event;
   }
 
+  //Recibir evento desde hijo
+  eventoDesdeElHijo: string = "";
+
+  recibeEventoDelHijo(){
+    this.eventoDesdeElHijo = "recibi evento desde el hijo"
+  }
+  recibeEventoDelHijo2(){
+    this.eventoDesdeElHijo = "recibi evento desde el hijo2"
+  }
 }
 

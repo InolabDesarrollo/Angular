@@ -4,6 +4,15 @@
 <button (click)="incrementar()">Incrementar</button>
 <button (click)="decrementar()">Decrementar</button>
 
-<app-hijo [recibeHijo] = "mensajePadre" (enviaHijo)="reciboMensajeHijo($event)"></app-hijo>
+<app-hijo [recibeHijo] = "mensajePadre" 
+(enviaHijo)="reciboMensajeHijo($event)"
+(enviarAPadre) ="recibeEventoDelHijo()"
+(enviarAPadre2)="recibeEventoDelHijo2()"
+/>
+<br>
+<br>
+<h4>El mensaje recibido desde el hijo es: {{mensajeHijo}}</h4>
 
-<h4>El mensaje del hijo es: {{mensajeHijo}}</h4>
+<h1>Eventos que se reciben desde el hijo</h1>
+<h4>{{eventoDesdeElHijo}}</h4>
+
